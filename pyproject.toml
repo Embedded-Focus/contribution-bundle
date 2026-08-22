@@ -1,0 +1,20 @@
+[project]
+name = "embedded-world-2026"
+version = "0.1.0"
+description = "Sources of what will be published for Devtreff 09 2026"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib",
+    "playwright",
+    "quarto-cli",
+]
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "ty",
+]
+
+[tool.uv]
+preview-features = ["audit-command"]

@@ -1,0 +1,72 @@
+/*-- HTL colors --*/
+
+$black-100: #000000;
+$black-005: unquote($black-100 + "0c");
+$black-010: unquote($black-100 + "19");
+$black-034: unquote($black-100 + "56");
+$white-90: #fafafa;
+$white-100: #ffffff;
+$color-1: #f25c05;
+$color-2: #010326;
+$color-3: #1f80a6;
+$grey-light: #dddddd;
+$grey-dark: #222222;
+
+
+// fonts
+$font-family-sans-serif: "IBM Plex Sans", sans-serif;
+
+/*-- scss:defaults --*/
+
+$body-bg: $white-100;
+$body-color: $color-2;
+$link-color: $color-2;
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  border-left: 3px solid $color-3;
+  padding-left: 0.5em;
+  color: $color-3;
+}
+
+.reveal div.sourceCode {
+    border: 1px solid $color-3;
+}
+
+.reveal .slide figure>figcaption,.reveal .slide img.stretch+p.caption,.reveal .slide img.r-stretch+p.caption {
+    color: $grey-dark;
+    text-align: center;
+}
+
+.reveal .progress {
+  background: $grey-dark;
+  color: $color-1;
+}
+
+// logo - hidden since we use it in footer instead
+
+.reveal .slide-logo {
+  display: none !important;
+}
+
+.reveal .footer {
+  color: $color-2;
+}
+
+.video-js {
+  background-color: $white-100;
+}
+
+// PDF export mode - ensure logo doesn't overlap with title/author
+// Reveal.js adds .print-pdf class to html element during PDF export
+html.print-pdf .reveal #title-slide {
+  background-position: center bottom 0.5rem;
+  background-size: 360px auto;
+}
+
+html.print-pdf .reveal #title-slide h1.title,
+html.print-pdf .reveal #title-slide .quarto-title-authors {
+  position: relative;
+  top: -6rem;
+}

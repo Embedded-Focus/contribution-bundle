@@ -116,9 +116,12 @@ def summarize(items):
 
 ## Mermaid Diagram
 
-::: {#fig-mermaid}
+::: {#fig-mermaid .r-stretch .diagram-full-slide}
 
 ```{mermaid}
+%% r-stretch uses the remaining Reveal.js slide space; fig-* sizes the rendered diagram.
+%%| fig-width: 12
+%%| fig-height: 5.8
 flowchart LR
   A[Hard edge] --> B(Round edge)
   B --> C{Decision}
@@ -131,9 +134,12 @@ This is a simple mermaid diagram
 
 ## Graphviz Diagram
 
-::: {#fig-dot}
+::: {#fig-dot .r-stretch .diagram-full-slide}
 
 ``` {dot}
+// r-stretch uses the remaining Reveal.js slide space; fig-* sizes the rendered diagram.
+//| fig-width: 12
+//| fig-height: 5.8
 graph G {
   layout=neato
   run -- intr;

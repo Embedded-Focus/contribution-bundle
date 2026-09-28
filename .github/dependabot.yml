@@ -8,9 +8,16 @@ updates:
       day: monday
       time: "06:00"
       timezone: Europe/Vienna
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 5
     groups:
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
       python-dependencies:
+        applies-to: version-updates
         patterns:
           - "*"
 
@@ -21,8 +28,15 @@ updates:
       day: monday
       time: "06:15"
       timezone: Europe/Vienna
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 5
     groups:
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
       github-actions:
+        applies-to: version-updates
         patterns:
           - "*"
